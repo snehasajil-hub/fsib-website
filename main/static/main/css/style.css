@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #1a1a2e;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.logo {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+}
+.nav-links a:hover {
+    color: #00d4ff;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #00d4ff;
+}
+.btn {
+    padding: 14px 40px;
+    background-color: #00d4ff;
+    color: #1a1a2e;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.btn:hover {
+    background-color: #ffffff;
+}
+
+/* SERVICES */
+.services {
+    padding: 80px 60px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #1a1a2e;
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #0f3460;
+}
+.card p {
+    color: #666;
+    font-size: 15px;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #1a1a2e;
+    color: #aaaaaa;
+    text-align: center;
+    padding: 24px;
+    font-size: 14px;
+}
+/* PAGE HERO */
+.page-hero {
+    background: linear-gradient(135deg, #1a1a2e, #0f3460);
+    color: white;
+    text-align: center;
+    padding: 80px 60px;
+}
+.page-hero h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+.page-hero p {
+    font-size: 18px;
+    color: #00d4ff;
+}
+
+/* ABOUT */
+.about-section {
+    padding: 80px 60px;
+    background: #f9f9f9;
+}
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+.about-text h2, .about-values h2 {
+    font-size: 28px;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+}
+.about-text p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+.about-values ul {
+    list-style: none;
+    padding: 0;
+}
+.about-values ul li {
+    font-size: 16px;
+    color: #333;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+/* CONTACT */
+.contact-section {
+    padding: 80px 60px;
+    background: #f9f9f9;
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+.contact-info h2, .contact-form h2 {
+    font-size: 28px;
+    color: #1a1a2e;
+    margin-bottom: 24px;
+}
+.contact-info p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 16px;
+    line-height: 1.8;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: 'Segoe UI', sans-serif;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #00d4ff;
+}
+.contact-form button {
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+        gap: 16px;
+    }
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    /* HERO */
+    .hero-content h1 {
+        font-size: 28px;
+    }
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    /* SERVICES GRID */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ABOUT GRID */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* CONTACT GRID */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* PAGE HERO */
+    .page-hero {
+        padding: 60px 20px;
+    }
+    .page-hero h1 {
+        font-size: 30px;
+    }
+
+    /* SECTIONS */
+    .services {
+        padding: 60px 20px;
+    }
+    .about-section {
+        padding: 60px 20px;
+    }
+    .contact-section {
+        padding: 60px 20px;
+    }
+}

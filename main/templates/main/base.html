@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>{% block title %}FSI Business Group{% endblock %}</title>
+    {% load static %}
+    <link rel='stylesheet' href="{% static 'main/css/style.css' %}">
+</head>
+<body>
+
+    <nav class='navbar'>
+        <div class='logo'>FSI Business Group</div>
+        <ul class='nav-links'>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer class='footer'>
+        <p>&#169; 2026 FSI Business Group, Doha, Qatar. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
